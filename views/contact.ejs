@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+
+    <div class="cursor-follower" style="width: 8px; height: 8px;"></div>
+
+    <script>const cursorFollower = document.querySelector('.cursor-follower');
+
+        document.addEventListener('mousemove', (e) => {
+            const { clientX, clientY } = e;
+            const mouseX = clientX - cursorFollower.clientWidth / 2;
+            const mouseY = clientY - cursorFollower.clientHeight / 2;
+            cursorFollower.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+        });
+        
+        document.addEventListener('mouseover', (e) => {
+            cursorFollower.classList.remove('hidden');
+        });
+        
+        document.addEventListener('mouseout', (e) => {
+            cursorFollower.classList.add('hidden');
+        });
+        </script>
+        
+    <header id="top" style="height: 100px; background-color: white; color: black; text-align: center;">
+        <div class="top-bar">
+            <div class="photo" style="transform: translate(40px,18px);"><img
+                    src="/images/image-removebg-preview (19).png" alt="image" width="110" height="80">
+            </div>
+            <div class="photo" style="transform: translate(-75px,-53px);"><img src="/images/Missionary.png" alt="image"
+                    width="200" height="230">
+            </div>
+
+            <div class="text" style="transform: translate(-60px,106px); margin: -40px -20px;">
+                भारत सरकार | GOVERNMENT OF INDIA</div>
+
+            <div class="photo" style="transform: translate(70px,8px);"><img
+                    src="/images/360_F_576039567_dNrcK76lhaCnoR7iFGCrK6YRECLjNKgv.png" alt="image" width="110"
+                    height="90">
+            </div>
+            <div class="photo" style="transform: translate(19px,-7px);"><img
+                    src="/images/image-removebg-preview (20).png" alt="image" width="150" height="120">
+            </div>
+            <div class="photo" style="transform: translate(-50px,10px);"><img
+                    src="/images/image-removebg-preview (26).png" alt="image" width="160" height="80">
+            </div>
+        </div>
+
+    </header>
+    <header class="head"
+        style="display: flex; justify-content: space-between; align-items: center; background-color: #98ff67;">
+        <nav>
+            <ul style="display: flex; list-style: none;">
+                <li><a href="/profile">Home</a></li>
+        <li><a href="/feed">Feed</a></li>
+        <li><a href="/news">News</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div>
+            <a style="text-decoration: none; color: black;" href="/contact" <i id="phone" class="fas fa-phone"></i></a>
+            <a style="text-decoration: none; color: black;" href="/account" <i id="user" class="fas fa-user"></i></a>
+        </div>
+    </header>
+
+    <section class="contact-info">
+        <h2>Contact Information</h2>
+        <p>Email: Devdynamos23@gmail.com</p>
+        <p>Phone: +91 8287758779</p>
+        <p>Address: Meri College Of Engineering And Technology</p>
+    </section>
+    <section class="contact-form">
+        <h2>Send us a Message</h2>
+        <form action="#" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <button type="submit" style="width: 130px;">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <h3>AGRI CONNECT</h3>
+            <p>Agri Connect is a platform that directly connects farmers with consumers, revolutionizing the
+                agricultural supply chain. It promotes transparency, fair pricing, and sustainable practices.</p>
+            <ul class="socials">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p style="color: white;">copyright &copy; <a href="/account">Agri Connect</a> </p>
+            <div class="footer-menu">
+                <ul class="f-menu">
+                    <li><a href="/profile">Home</a></li>
+                    <li><a href="/feed">Feed</a></li>
+                    <li><a href="/news">News</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+</body>
+
+</html>

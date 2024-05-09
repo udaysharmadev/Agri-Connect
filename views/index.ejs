@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+
+  <div class="cursor-follower" style="width: 8px; height: 8px;"></div>
+
+    <script>const cursorFollower = document.querySelector('.cursor-follower');
+
+        document.addEventListener('mousemove', (e) => {
+            const { clientX, clientY } = e;
+            const mouseX = clientX - cursorFollower.clientWidth / 2;
+            const mouseY = clientY - cursorFollower.clientHeight / 2;
+            cursorFollower.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+        });
+        
+        document.addEventListener('mouseover', (e) => {
+            cursorFollower.classList.remove('hidden');
+        });
+        
+        document.addEventListener('mouseout', (e) => {
+            cursorFollower.classList.add('hidden');
+        });
+
+
+      
+        </script>
+        
+  <div class="container">
+    <div class="content">
+      <!--pinterest logo-->
+      <img src="/images/circle logo.png" alt="pin logo" class="img1" />
+      <p class="header">Make account to see more</p>
+      <br>
+      <form action="/register" method="post">
+
+      <input type="email" name="email" placeholder="Email" class="detail" /><br />
+      <input type="text" name="username" placeholder="User Name" class="detail" /><br />
+      <input type="text" name="fullName" placeholder="Full name" class="detail" /><br />
+      <input type="password" name="password" placeholder="Password" class="detail" />
+      <br>
+      <br>
+      <input type="checkbox" id="farmerCheckbox" name="userType" value="Farmer">
+<label for="farmerCheckbox">Farmer</label>
+
+<input type="checkbox" id="retailerCheckbox" name="userType" value="Retailer">
+<label for="retailerCheckbox">Retailer</label>
+      <br>
+      <br>
+
+      <input id="button" type="submit" class="btn int" value="Register Account">
+
+      </form>
+
+      <footer>
+        <a href="/login">Already On Agri Connect? Login Here</a>
+      </footer>
+    </div>
+  </div>
+
+</body>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+      checkboxes.forEach(function(checkbox) {
+          checkbox.addEventListener('change', function() {
+              checkboxes.forEach(function(cb) {
+                  if (cb !== checkbox) {
+                      cb.checked = false;
+                  }
+              });
+          });
+      });
+  });
+  </script>
+</html>

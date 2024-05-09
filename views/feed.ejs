@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/stylesheets/feed.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="cursor-follower" style="width: 8px; height: 8px;"></div>
+
+    <script>const cursorFollower = document.querySelector('.cursor-follower');
+
+        document.addEventListener('mousemove', (e) => {
+            const { clientX, clientY } = e;
+            const mouseX = clientX - cursorFollower.clientWidth / 2;
+            const mouseY = clientY - cursorFollower.clientHeight / 2;
+            cursorFollower.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+        });
+        
+        document.addEventListener('mouseover', (e) => {
+            cursorFollower.classList.remove('hidden');
+        });
+        
+        document.addEventListener('mouseout', (e) => {
+            cursorFollower.classList.add('hidden');
+        });
+        </script>
+        
+  <header id="top" style="height: 100px; background-color: white; color: black; text-align: center;">
+    <div class="top-bar">
+      <div class="photo" style="transform: translate(40px,18px);"><img src="/images/image-removebg-preview (19).png"
+          alt="image" width="110" height="80">
+      </div>
+      <div class="photo" style="transform: translate(-75px,-53px);"><img src="/images/Missionary.png" alt="image"
+          width="200" height="230">
+      </div>
+
+      <div class="text" style="transform: translate(-60px,106px); margin: -40px -20px;">
+        भारत सरकार | GOVERNMENT OF INDIA</div>
+
+      <div class="photo" style="transform: translate(70px,8px);"><img
+          src="/images/360_F_576039567_dNrcK76lhaCnoR7iFGCrK6YRECLjNKgv.png" alt="image" width="110" height="90">
+      </div>
+      <div class="photo" style="transform: translate(19px,-7px);"><img src="/images/image-removebg-preview (20).png"
+          alt="image" width="150" height="120">
+      </div>
+      <div class="photo" style="transform: translate(-50px,10px);"><img src="/images/image-removebg-preview (26).png"
+          alt="image" width="160" height="80">
+      </div>
+    </div>
+
+  </header>
+  <header class="head"
+    style="display: flex; justify-content: space-between; align-items: center; background-color: #98ff67;">
+    <nav>
+      <ul style="display: flex; list-style: none;">
+        <li><a href="/profile">Home</a></li>
+        <li><a href="/feed">Feed</a></li>
+        <li><a href="/news">News</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+      </ul>
+    </nav>
+    <div>
+      <a style="text-decoration: none; color: black;" href="/contact" <i id="phone" class="fas fa-phone"></i></a>
+      <a style="text-decoration: none; color: black;" href="/account" <i id="user" class="fas fa-user"></i></a>
+    </div>
+
+  </header>
+
+
+
+
+  <style>
+    .posts {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .post {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .post img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .post-header {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        background-color: #f9f9f9;
+    }
+
+    .post-header img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+    .post-content {
+        padding: 10px;
+    }
+
+    .username {
+        font-weight: bold;
+        margin-bottom: 4px;
+        transform: translateY(-7px);
+    }
+
+    .image-text {
+        margin-top: 10px;
+    }
+
+    .whatsapp-btn {
+        display: block;
+        text-align: center;
+        padding: 10px;
+        background-color: #25D366;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+</style>
+
+<div class="posts">
+    <% posts.reverse().forEach(function(elem){ %>
+    <div class="post">
+        <div class="post-header">
+            <img src="https://media.licdn.com/dms/image/C4D12AQGGhLjSGwwZlw/article-cover_image-shrink_600_2000/0/1601205955175?e=2147483647&v=beta&t=BPIUJdgnIoxjgMBJOv_Fc0MMRUNoB8gamPwNQg6ILPo" alt="User Image">
+            <h4 class="username" style="transform: translate(-8px,-12px);"><%= elem.user.username %></h4>
+            <h5 class="typo" style="transform: translate(-41px,13px); font-size: 12px; font-weight: lighter;"><%= elem.user.userType %></h5>
+        </div>
+        <div class="post-image">
+            <img src="/images/uploads/<%= elem.image %>" alt="Post Image">
+        </div>
+        <div class="post-content">
+            <h3 class="image-text"><%= elem.imageText %></h3>
+            <h4 class="post-time"><%= elem.createdAt %></h4>
+            <a href="https://wa.me/8287758779?text=Namaste!%20Mujhe%20Iske%20Bare%20Main%20Aur%20Jaankari%20Chaiye" class="whatsapp-btn">Enquiry on WhatsApp</a>
+        </div>
+    </div>
+    <% }) %>
+</div>
+
+
+</body>
+
+</html>

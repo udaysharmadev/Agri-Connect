@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGRI CONNECT</title>
+    <link rel="stylesheet" href="/stylesheets/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
+
+
+</head>
+
+<body>
+
+    <div class="cursor-follower" style="width: 8px; height: 8px;"></div>
+
+    <script>const cursorFollower = document.querySelector('.cursor-follower');
+
+        document.addEventListener('mousemove', (e) => {
+            const { clientX, clientY } = e;
+            const mouseX = clientX - cursorFollower.clientWidth / 2;
+            const mouseY = clientY - cursorFollower.clientHeight / 2;
+            cursorFollower.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+        });
+        
+        document.addEventListener('mouseover', (e) => {
+            cursorFollower.classList.remove('hidden');
+        });
+        
+        document.addEventListener('mouseout', (e) => {
+            cursorFollower.classList.add('hidden');
+        });
+        </script>
+
+
+
+    <header id="top" style="height: 100px; background-color: white; color: black; text-align: center;">
+        <div class="top-bar">
+            <div class="photo" style="transform: translate(40px,18px);"><img
+                    src="/images/image-removebg-preview (19).png" alt="image" width="110" height="80">
+            </div>
+            <div class="photo" style="transform: translate(-75px,-53px);"><img src="/images/Missionary.png" alt="image"
+                    width="200" height="230">
+            </div>
+
+            <div class="text" style="transform: translate(-60px,106px); margin: -40px -20px;">
+                भारत सरकार | GOVERNMENT OF INDIA</div>
+
+            <div class="photo" style="transform: translate(70px,8px);"><img
+                    src="/images/360_F_576039567_dNrcK76lhaCnoR7iFGCrK6YRECLjNKgv.png" alt="image" width="110"
+                    height="90">
+            </div>
+            <div class="photo" style="transform: translate(19px,-7px);"><img
+                    src="/images/image-removebg-preview (20).png" alt="image" width="150" height="120">
+            </div>
+            <div class="photo" style="transform: translate(-50px,10px);"><img
+                    src="/images/image-removebg-preview (26).png" alt="image" width="160" height="80">
+            </div>
+        </div>
+
+    </header>
+    <header class="head"
+        style="display: flex; justify-content: space-between; align-items: center; background-color: #98ff67; transform: translateX(23.8px);">
+        <nav style="transform: translateX(-5px);">
+            <ul style="display: flex; list-style: none;">
+                <li><a href="/profile">Home</a></li>
+                <li><a href="/feed">Feed</a></li>
+                <li><a href="/news">News</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <div style="flex: 1; display: flex; justify-content:flex-end; align-items: center; margin-right: 145px;">
+            <!-- Language switch section -->
+            <button style="margin-right: 6px; padding: 5px 10px; background-color: transparent; border: 1px solid white; border-radius: 10px; cursor: pointer; font-weight: bold;">English</button>
+            <button style="margin-left: 10px; padding: 5px 10px; background-color: transparent; border: 1px solid white; border-radius: 10px; cursor: pointer; font-weight: bold;">Hindi</button>
+        </div>
+        
+        <div>
+            <a style="text-decoration: none; color: black;" href="/contact" <i id="phone" class="fas fa-phone"></i></a>
+            <a style="text-decoration: none; color: black;" href="/account" <i id="user" class="fas fa-user"></i></a>
+        </div>
+    </header>
+    <section style="margin: 8px 0; padding: 0 16px;">
+        <h1>KNOW MORE ABOUT PRADHANMANTRI KISAN SAMAN NIDHI</h1>
+        <img src="/images/27.png" alt="main" width="98%" height="50px">
+    </section>
+    <main>
+        <img src="/images/25.png" alt="Main Image" style="width: 96%;">
+    </main>
+
+
+
+    
+    
+    
+
+    <section class="an" >
+        <div class="one">
+            <h1>Latest Schemes For Farmers</h1>
+            <h4>Empowering Agriculture: A Guide to the Latest Farmer Schemes</h4>
+            <ul style="list-style-type: disc; margin-left: 20px; font-size: 16px; color: #666;">
+                <li>Financial support to purchase modern equipment and machinery.</li>
+                <li>Subsidies on fertilizers, seeds, and other agricultural inputs.</li>
+                <li>Access to crop insurance to protect against crop failure due to natural calamities.</li>
+                <li>Training and education programs to improve farming practices and productivity.</li>
+                <li>Market linkage support to help farmers sell their produce at fair prices.</li>
+                <li>Schemes often include provisions for developing agricultural infrastructure such as irrigation
+                    systems, storage facilities, and rural roads, improving overall farm efficiency.</li>
+                <li>Farmers can access high-quality seeds, fertilizers, and pesticides at subsidized rates, enhancing
+                    crop yield and quality.</li>
+                <li>Crop insurance schemes provide financial protection to farmers against losses caused by unforeseen
+                    events like droughts, floods, or pest attacks.</li>
+            </ul>
+
+        </div>
+        <div class="two">
+            <div class="heading">Announcements</div>
+            <br>
+            <div class="desc">
+                <a href="/news">"Agriculture Infrastcuture Fund (AIF)..."</a>
+                <a href="/news">"Formation And Promotion Of New 10,000 FP0's..."</a>
+                <a href="/news">"Modified Interest Subvention Scheme (MISS)..."</a>
+                <a href="/news">"National BeeKeeping And Honey Mission (NBHM)..."</a>
+                <a href="/news">"Pradhan Mantri Fasal Bima Yojna 9PM-KMY..."</a>
+                <a href="/news">"Formation And Promotion Of New 10,000 FP0's..."</a>
+                <a href="/news">"Modified Interest Subvention Scheme (MISS)..."</a>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="photo1">
+        <img src="/images/26.png" width="1200px">
+    </div>
+
+
+
+    <div class="headd"
+        style="transform: translate(520px,200px); width: fit-content; font-size: 33px; font-weight: bolder; color: black; transition: color 0.3s, text-shadow 0.3s;"
+        onmouseover="this.style.color='#39b54a'"
+        onmouseout="this.style.color='black'; this.style.textShadow='none'">
+        SERVICES WE OFFER
+    </div>
+
+
+
+    <div class="ico">
+        <i class="fa-solid fa-medal"></i>
+        <i class="fa-solid fa-people-group"></i>
+        <i class="fa-solid fa-industry"></i>
+    </div>
+
+    <div class="texo">
+        <div class="ek">
+            <h1>Quality Assurance</h1>
+            <h4>We Promise, We Proof</h4>
+        </div>
+
+        <div class="do">
+            <h1>Surety</h1>
+            <h4>Trust And Manage</h4>
+        </div>
+
+        <div class="teen">
+            <h1>Warehouse Setup</h1>
+            <h4>Demand And Design</h4>
+        </div>
+
+    </div>
+
+
+
+    <h1 style="transform: translate(609px,400px); width: fit-content; font-size: 31px;">Our Team</h1>
+    <h4 style="display: flex; transform: translate(588px,400px); width: fit-content; font-weight: lighter; ">Meet Our Team Members</h4>
+
+    <div class="team">
+        <div class="team-section">
+            <div class="team-member">
+                <img src="https://cutt.ly/Hwn6Y0NL" alt="Team Member 1">
+                <h3>Uday Sharma</h3>
+                <p class="role">Full-Stack<br> Web Developer</p>
+            </div>
+            <div class="team-member">
+                <img src="https://cutt.ly/Hwn6Y0NL" alt="Team Member 3">
+                <h3>Sachin Verma</h3>
+                <p class="role">Graphic And UI/UX <br> Designer</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <h3>AGRI CONNECT</h3>
+            <p>Agri Connect is a platform that directly connects farmers with consumers, revolutionizing the
+                agricultural supply chain. It promotes transparency, fair pricing, and sustainable practices.</p>
+            <ul class="socials">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p style="color: white;">copyright &copy; <a href="/account">Agri Connect</a> </p>
+            <div class="footer-menu">
+                <ul class="f-menu">
+                    <li><a href="/profile">Home</a></li>
+                    <li><a href="/feed">Feed</a></li>
+                    <li><a href="/news">News</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+</body>
+
+</html>
